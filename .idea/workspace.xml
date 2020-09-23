@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6bbd63f-7e3a-4edb-bde9-f185e41980b6" name="Default Changelist" comment="" />
+    <list default="true" id="a6bbd63f-7e3a-4edb-bde9-f185e41980b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,10 +27,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="125" column="57" selection-start-line="125" selection-start-column="57" selection-end-line="125" selection-end-column="57" />
+            <state relative-caret-position="765">
+              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
               <folding>
-                <marker date="1600851788393" expanded="true" signature="450:453" ph="..." />
+                <marker date="1600873974015" expanded="true" signature="450:453" ph="..." />
               </folding>
             </state>
           </provider>
@@ -113,15 +115,16 @@
       <workItem from="1600754842593" duration="13365000" />
       <workItem from="1600843889250" duration="8315000" />
       <workItem from="1600858850833" duration="61000" />
-      <workItem from="1600870209143" duration="53000" />
+      <workItem from="1600870209143" duration="789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30048000" />
+    <option name="totallyTimeSpent" value="30784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="760" y="0" width="783" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.504957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -167,10 +170,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="57" selection-start-line="125" selection-start-column="57" selection-end-line="125" selection-end-column="57" />
+        <state relative-caret-position="765">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
           <folding>
-            <marker date="1600851788393" expanded="true" signature="450:453" ph="..." />
+            <marker date="1600873974015" expanded="true" signature="450:453" ph="..." />
           </folding>
         </state>
       </provider>
