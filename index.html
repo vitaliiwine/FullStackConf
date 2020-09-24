@@ -7,7 +7,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+<!-- modal window --->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- modal body-->
+                <div class="row form-group">
+                    <div class="col-6 col-sm-6">
+                        <label for="first-name">First name</label>
+                        <input id="first-name" type="text" class="form-control" placeholder="First name">
+                        <label class="pt-3" for="last-name">Last name</label>
+                        <input id="last-name" type="text" class="form-control" placeholder="Last name">
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" class="form-control" placeholder="Password">
+                        <label class="pt-3" for="email">Email address</label>
+                        <input id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                </div><!-- /modal body -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Sumbit</button>
+            </div>
+        </div>
+    </div>
+</div><!-- /modal window -->
 
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -19,7 +56,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#home">Home</a>
                 <a class="nav-item nav-link" href="#about">About</a>
                 <a class="nav-item nav-link" href="#speakers">Speakers</a>
                 <a class="nav-item nav-link" href="#schedule">Schedule</a>
@@ -29,19 +66,18 @@
 </nav> <!--< /nav bar > -->
 
 <!-- jumbotron -->
-
 <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
     <div id="home" class="container pt-5">
         <h1 class="display-3">Full Stack Conf</h1>
         <p class="lead">A One-day Conference About All Things JavaScript.</p>
         <div class="btn-group mt-4" role="group" aria-label="Call out buttons">
-            <button type="button" class="btn bg-primary btn-lg btn-outline-light">Register Now</button>
+            <button type="button" class="btn bg-primary btn-lg btn-outline-light" data-toggle="modal"
+                    data-target="#register">Register Now
+            </button>
             <a class="btn bg-light btn-lg btn-outline-primary" href="#speakers">See Speakers</a>
         </div>
     </div>
-</div>
-
-<!-- /jumbotron -->
+</div><!-- /jumbotron -->
 
 <div id="about" class="container pt-4">
     <!-- about section -->
@@ -55,26 +91,28 @@
         </div>
         <div class="col-lg order-1">
             <h3 class="mb-3 text-center text-lg-left">Expert Speakers</h3>
-            <p>Our expert speaker lineup was just announced, so don't wait too long before grabbing your
-                tickets!</p>
+            <p>Our expert speaker lineup was just announced, so don't wait too long before grabbing your tickets!</p>
             <p>Want to meet the international JavaScript community and share skills with some of the world's top
                 experts, hackers, and makers? Be the first to know what to expect for the future of JavaScript.</p>
             <p>Full Stack Conf is committed to being inclusive and welcoming for everyone. We look forward to
-                another
-                intensive day of learning and sharing.</p>
+                another intensive day of learning and sharing.</p>
         </div>
         <div class="col-lg order-3">
             <h3 class="mb-3 text-center text-lg-left">What You'll Learn</h3>
-            <ul>
-                <li><strong>MongoDB</strong>: NoSQL database</li>
-                <li><strong>Express</strong>: Framework for Node</li>
-                <li><strong>React</strong>: JavaScript library</li>
-                <li><strong>Node.js</strong>: JavaScript environment</li>
-                <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-                <li><strong>Babel</strong>: JavaScript compiler</li>
-            </ul>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</a>
+                <a href="#" class="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</a>
+                <a href="#" class="list-group-item list-group-item-action"><strong>React</strong>: JavaScript
+                    library</a>
+                <a href="#" class="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript
+                    environment</a>
+                <a href="#" class="list-group-item list-group-item-action"><strong>ES2020</strong>: Latest version of
+                    JavaScript</a>
+                <a href="#" class="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript
+                    compiler</a>
+            </div>
         </div>
-    </div>  <!-- /about section-->
+    </div> <!-- /about section-->
 
     <!-- speakers section-->
     <h1 id="speakers" class="display-4 text-center my-4 text-muted">Speakers</h1>
@@ -144,12 +182,165 @@
 
     <!-- schedule section-->
     <h1 id="schedule" class="display-4 text-center my-4 text-muted">Schedule</h1>
-    [Schedule section]
-    <!-- /schedule section-->
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header d-flex" id="headingOne">
+                <h5 class="mb-1 d-block">Keynote: Internet of Things</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">9:00am</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">NodeStradamus</p>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingTwo">
+                <h5 class="mb-1 d-block">React Basics</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">10:00am</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">Vivianne McVue</p>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingThree">
+                <h5 class="mb-1 d-block">Hey, Mongo!</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="true" aria-controls="collapseThree">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">11:00am</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">Jay Query</p>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingFour">
+                <h5 class="mb-1 d-block">Lunch!</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="true" aria-controls="collapseFour">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">12:00am</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">Free pizza and drinks!</p>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingFive">
+                <h5 class="mb-1 d-block">Introducing ES2020</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="true" aria-controls="collapseFive">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">1:00pm</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">Ecma Scriptnstuff</p>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingSix">
+                <h5 class="mb-1 d-block">Getting Started With Redux</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseSix"
+                        aria-expanded="true" aria-controls="collapseSix">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">2:00pm</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">Robbie Redux</p>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex" id="headingSeven">
+                <h5 class="mb-1 d-block">What's Babel?</h5>
+                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseSeven"
+                        aria-expanded="true" aria-controls="collapseSeven">
+                    Details
+                </button>
+                <span class="badge badge-pill badge-info p-2 my-auto">3:00pm</span>
+            </div>
+            <p class="mb-2 mt-2 ml-4">What's Babel?</p>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                <div class="card-body pt-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div> <!-- /schedule section-->
 
     <!-- call out button -->
-
-    <button type="button" class="btn btn-outline-info btn-large d-block mx-auto my-4">Don't Miss Out, Register Now
+    <button type="button" class="btn btn-outline-info btn-large d-block mx-auto my-4" data-toggle="modal"
+            data-target="#register">Don't Miss Out, Register Now
     </button>
 
     <!-- sign up form -->
@@ -194,15 +385,16 @@
                             <a class="dropdown-item" href="#">PHP Conf</a>
                             <a class="dropdown-item" href="#">Python Conf</a>
                             <a class="dropdown-item" href="#">Swift Conf</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://vitaliiwine.github.io/stick-in/">Stick In</a>
                         </div>
                     </div>
                 </nav>
             </div>
-            <div class="col-md-4 ml-auto my-auto col-4">&raquo; 2020 Full Stack Conf & Treehouse</div>
+            <div class="col-md-4 ml-auto my-auto col-4">&copy; 2020 Full Stack Conf & Treehouse</div>
         </div>
     </div>
 </div><!-- /footer -->
-
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
