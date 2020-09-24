@@ -58,6 +58,14 @@
     border-radius: 0;
 }
 
-.col, .col-5, .col-6 {
-    border: 1px solid white;
+.navbar {
+    box-shadow: 8px 0 15px rgba(255, 255, 255, .8);
+}
+
+.jumbotron {
+    box-shadow: 8px 0 15px rgba(0, 0, 0, .5);
+}
+
+.card {
+    /*box-shadow: 0px 0px 5px .5px rgba(0,0,0,0.75);*/
 }
