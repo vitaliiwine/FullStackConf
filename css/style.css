@@ -4,6 +4,15 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+button {
+    background: cornflowerblue;
+}
+
+button:not(.btn-link,
+.btn-outline-info) {
+    background: cornflowerblue;
+}
+
 /* No round borders Bootstrap --------------------------- */
 
 .img-thumbnail,
@@ -63,7 +72,10 @@ body {
 .custom-select,
 .list-group,
 .list-group-item,
-.list-group-item-action {
+.list-group-item-action,
+.modal,
+.modal-content,
+.modal-header {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -74,6 +86,12 @@ body {
 .navbar {
     background: cornflowerblue;
     box-shadow: 8px 0 15px rgba(38, 38, 38, 0.94);
+}
+
+/* Modal Window ----------------------------------- */
+
+.modal-header {
+    background: cornflowerblue;
 }
 
 /* Intro Section ---------------------------------- */

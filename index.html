@@ -16,36 +16,47 @@
      aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+            <div class="modal-header text-white">
+                <h5 class="modal-title" id="exampleModalLabel"><strong>Register for Full Stack Conf</strong></h5>
             </div>
             <!-- modal body-->
             <div class="modal-body">
                 <form>
-                    <h5 class="mb-3">Basic Info</h5>
+                    <div class="alert alert-warning" role="alert">
+                        This is a secondary alert—check it out!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <h5 class="mb-3" data-dismiss="alert"><strong>Basic Info</strong></h5>
                     <div class="row">
                         <div class="col-6">
-                            <label class="form-control-label" for="first-name">First name:</label>
-                            <input type="text" class="form-control" id="first-name">
-                            <label class="form-control-label pt-3" for="last-name">Last name:</label>
-                            <input type="text" class="form-control" id="last-name">
+                            <div class="form-group">
+                                <label class="form-control-label" for="first-name">First name:</label>
+                                <input type="text" class="form-control" id="first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label " for="last-name">Last name:</label>
+                                <input type="text" class="form-control" id="last-name">
+                            </div>
                         </div>
                         <div class="col-6">
-                            <label class="form-control-label" for="password">Password:</label>
-                            <input type="password" class="form-control" id="password">
-                            <label class="form-control-label pt-3" for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email">
-                            <small class="form-text text-muted">We'll never share your email with anyone else.
-                            </small>
+                            <div class="form-group">
+                                <label class="form-control-label" for="password">Password:</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label " for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                                <small class="form-text text-muted">We'll never share your email with anyone else.
+                                </small>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col">
                             <label class="form-control-label" for="inputGroupSelect">Job role:</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group">
                                 <select class="custom-select" id="inputGroupSelect">
                                     <option selected>Choose...</option>
                                     <option value="1">Java Developer</option>
@@ -57,7 +68,33 @@
                                 </select>
                             </div>
                         </div>
-                    </div><!-- /modal body -->
+                    </div>
+                    <hr>
+                    <h5><strong>Which Topics Interest You Most?</strong></h5>
+                    <div class="form-check">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">JavaScript Frameworks</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">JavaScript Libraries</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3">Node.js</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                            <label class="custom-control-label" for="customCheck4">Build Tools</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                            <label class="custom-control-label" for="customCheck5">ES2020</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- /modal body -->
                 </form>
             </div>
             <div class="modal-footer">
@@ -94,10 +131,10 @@
             <h1 class="display-3">Full Stack Conf</h1>
             <p class="lead">A One-day Conference About All Things JavaScript.</p>
             <div class="btn-group mt-4" role="group" aria-label="Call out buttons">
-                <button type="button" class="btn bg-primary btn-lg btn-outline-light" data-toggle="modal"
+                <button type="button" class="btn btn-lg btn-outline-success" data-toggle="modal"
                         data-target="#register">Register Now
                 </button>
-                <a class="btn bg-light btn-lg btn-outline-primary" href="#speakers">See Speakers</a>
+                <a class="btn btn-lg btn-outline-primary" href="#speakers">See Speakers</a>
             </div>
         </div>
     </div>
@@ -234,7 +271,7 @@
         <div class="card">
             <div class="card-header d-flex" id="headingTwo">
                 <h5 class="mb-1 d-block">React Basics</h5>
-                <button class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseTwo"
+                <button id="noOutline" class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
                     Details
                 </button>
@@ -421,6 +458,7 @@
     </div>
 </div><!-- /footer -->
 
+<script src="js/js.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
