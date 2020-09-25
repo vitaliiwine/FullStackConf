@@ -22,14 +22,14 @@
             <!-- modal body-->
             <div class="modal-body">
                 <form>
-                    <div class="alert alert-warning" role="alert">
-                        This is a secondary alert—check it out!
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Hurry!</strong> Early bird registration ends in two days.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <h5 class="mb-3" data-dismiss="alert"><strong>Basic Info</strong></h5>
-                    <div class="row">
+                    <div class="form-row">
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="form-control-label" for="first-name">First name:</label>
@@ -94,9 +94,53 @@
                         </div>
                     </div>
                     <hr>
-                    <!-- /modal body -->
+                    <h5><strong>Payment Info</strong></h5>
+
+                    <div class="form-row">
+                        <div class="col-6 form-group">
+                            <label for="cc-num">Card Number:</label>
+                            <input class="form-control" id="cc-num" type="text">
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="zip">Zip Code:</label>
+                            <input class="form-control" id="zip" type="text">
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="cvv">CVV:</label>
+                            <input class="form-control" id="cvv" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label class="col-lg-12" for="monthSelection">Expiration date:</label>
+
+                        <div class="form-group col-lg-8">
+                            <select class="custom-select" id="monthSelection">
+                                <option value="1">1 - January</option>
+                                <option value="2">2 - February</option>
+                                <option value="3">3 - March</option>
+                                <option value="4">4 - April</option>
+                                <option value="5">5 - May</option>
+                                <option value="6">6 - June</option>
+                                <option value="1">7 - July</option>
+                                <option value="2">8 - August</option>
+                                <option value="3">9 - September</option>
+                                <option value="4">10 - October</option>
+                                <option value="5">11 - November</option>
+                                <option value="6">12 - December</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <select class="custom-select" id="yearSelection">
+                                <option value="1">2016</option>
+                                <option value="2">2017</option>
+                                <option value="3">2018</option>
+                                <option value="4">2019</option>
+                                <option value="5">2020</option>
+                            </select>
+                        </div>
+                    </div>
                 </form>
-            </div>
+            </div><!-- /modal body -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Submit</button>
@@ -131,7 +175,7 @@
             <h1 class="display-3">Full Stack Conf</h1>
             <p class="lead">A One-day Conference About All Things JavaScript.</p>
             <div class="btn-group mt-4" role="group" aria-label="Call out buttons">
-                <button type="button" class="btn btn-lg btn-outline-success" data-toggle="modal"
+                <button id="homeRegister" type="button" class="btn btn-lg btn-outline-success" data-toggle="modal"
                         data-target="#register">Register Now
                 </button>
                 <a class="btn btn-lg btn-outline-primary" href="#speakers">See Speakers</a>
@@ -271,7 +315,8 @@
         <div class="card">
             <div class="card-header d-flex" id="headingTwo">
                 <h5 class="mb-1 d-block">React Basics</h5>
-                <button id="noOutline" class="btn btn-link btn-sm ml-auto" data-toggle="collapse" data-target="#collapseTwo"
+                <button id="noOutline" class="btn btn-link btn-sm ml-auto" data-toggle="collapse"
+                        data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
                     Details
                 </button>

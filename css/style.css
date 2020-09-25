@@ -4,15 +4,6 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-button {
-    background: cornflowerblue;
-}
-
-button:not(.btn-link,
-.btn-outline-info) {
-    background: cornflowerblue;
-}
-
 /* No round borders Bootstrap --------------------------- */
 
 .img-thumbnail,
@@ -86,6 +77,11 @@ button:not(.btn-link,
 .navbar {
     background: cornflowerblue;
     box-shadow: 8px 0 15px rgba(38, 38, 38, 0.94);
+}
+
+.navbar .navbar-brand {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
 }
 
 /* Modal Window ----------------------------------- */
