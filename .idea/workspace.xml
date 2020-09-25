@@ -24,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+            <state relative-caret-position="463">
+              <caret line="132" column="22" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -139,12 +139,12 @@
       <workItem from="1600843889250" duration="8315000" />
       <workItem from="1600858850833" duration="61000" />
       <workItem from="1600870209143" duration="903000" />
-      <workItem from="1600929925703" duration="29514000" />
+      <workItem from="1600929925703" duration="30242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60412000" />
+    <option name="totallyTimeSpent" value="61140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="501" y="0" width="1042" height="830" extended-state="0" />
@@ -195,6 +195,13 @@
     <entry file="file://$PROJECT_DIR$/js/js.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="132" column="22" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -204,13 +211,6 @@
             <element signature="e#12569#12575#0" expanded="true" />
             <marker date="1601028073875" expanded="true" signature="6206:6209" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
         </state>
       </provider>
     </entry>
