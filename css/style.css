@@ -1,3 +1,9 @@
+/* Base ------------------------------------------------- */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 /* No round borders Bootstrap --------------------------- */
 
 .img-thumbnail,
@@ -52,23 +58,32 @@
 .panel-group .panel,
 .panel-group .panel-heading,
 .panel-group .panel-body,
-.breadcrumb-arrow li:first-child a {
+.breadcrumb-arrow li:first-child a,
+.input-group,
+.custom-select,
+.list-group,
+.list-group-item,
+.list-group-item-action {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
 }
+
+/* Navi Section ---------------------------------- */
 
 .navbar {
     background: cornflowerblue;
     box-shadow: 8px 0 15px rgba(38, 38, 38, 0.94);
 }
 
+/* Intro Section ---------------------------------- */
+
 .jumbotron {
     box-shadow: 8px 0 15px rgba(38, 38, 38, 0.94);
 }
 
 h1 {
-    margin-top: 95px;
+    margin-top: 115px;
 }
 
 #jumbotron {
@@ -85,4 +100,10 @@ h1 {
     width: 100%;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Section ---------------------------------- */
+
+.footer {
+    background: cornflowerblue;
 }
